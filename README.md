@@ -8,5 +8,6 @@ TASKS:
 
 ### 2: [DATA ACCESS LAYER]
 TASKS:
-- [2.1] Mapping Entity
-- [2.2] Create Repository and test its methods
+- [2.1] Mapping Student Entity
+- [2.2] Create Student Repository and test its methods
+- [2.3] Create embeddable Guardian Class

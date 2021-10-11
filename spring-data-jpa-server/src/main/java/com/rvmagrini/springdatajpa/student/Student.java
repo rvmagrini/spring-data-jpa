@@ -1,6 +1,7 @@
 package com.rvmagrini.springdatajpa.student;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import com.rvmagrini.springdatajpa.guardian.Guardian;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -40,9 +43,10 @@ public class Student {
 	@Column(name = "email",
 			nullable = false)
 	private String emailId;
-	private String guardianName;
-	private String guardianEmail;
-	private String guardianMobile;
+	
+	
+	@Embedded
+	private Guardian guardian;
 	
 
 }
