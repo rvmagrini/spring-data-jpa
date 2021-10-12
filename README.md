@@ -12,4 +12,5 @@ TASKS:
 - [2.2] Create Student Repository and test its methods
 - [2.3] Create embeddable Guardian Class
 - [2.4] Test JPA Repository & its Query Methods
+- [2.5] JPA Query Annotations
 

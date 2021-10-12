@@ -99,6 +99,22 @@ class StudentRepositoryTest {
 		
 		System.out.println("===== Student rob + nesta: " + student);
 	}
+	
+	
+	// Passing Query (JPQL)
+	@Test
+	public void printStudentByEmailAddress() {
+		Student student = studentRepository.getStudentByEmailAddress("rob@gmail.com");
+		
+		System.out.println("===== Get student by email address rob@gmail.com: " + student);
+	}
+	
+	@Test
+	public void printFirstNameByEmailAddress() {
+		String studentFirstNameByEmailAddress = studentRepository.getStudentFirstNameByEmailAddress("steve@gmail.com");
+		
+		System.out.println("===== Print first name by email address steve@gmail.com: " + studentFirstNameByEmailAddress);
+	}
 
 
 }
