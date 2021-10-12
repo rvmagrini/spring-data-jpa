@@ -9,7 +9,7 @@ TASKS:
 
 ### 2: [JPA MAP AND QUERY]
 TASKS:
-- [2.1] Mapping Student Entity
+- [2.1] Create and Map Student Entity
 - [2.2] Create Student Repository and test save/list Methods
 - [2.3] Create embeddable Guardian Class
 - [2.4] Test JPA Repository & its Query Methods
@@ -20,3 +20,5 @@ TASKS:
 
 ### 3: [JPA RELATIONSHIPS]
 - [3.1] Create and Map Course and CourseMaterial Entities 
+- [3.2] Save Course using CourseMaterialRepo with Cascading
+

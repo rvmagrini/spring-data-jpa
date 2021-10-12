@@ -1,9 +1,12 @@
 package com.rvmagrini.springdatajpa.course;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -31,6 +34,15 @@ public class CourseMaterial {
 	private Long courseMaterialId;
 	private String url;
 	
+	// Adding one extra column to CourseMaterial table that refers to the course to which the
+	// material belongs: adding the primary key from Course as a foreign key in CourseMaterial
+	@JoinColumn(
+			name = "course_id",
+			referencedColumnName = "courseId"
+			)
+	@OneToOne (
+			cascade = CascadeType.ALL
+			)
 	private Course course;
 
 }
