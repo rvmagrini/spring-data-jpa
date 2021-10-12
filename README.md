@@ -7,7 +7,7 @@
 TASKS:
 - [1.1] Create Spring Boot Project, Database Schema and application properties
 
-### 2: [DATA ACCESS LAYER]
+### 2: [JPA MAP AND QUERY]
 TASKS:
 - [2.1] Mapping Student Entity
 - [2.2] Create Student Repository and test save/list Methods
@@ -17,3 +17,6 @@ TASKS:
 - [2.6] Test Native Query
 - [2.7] Test Native Query Named Param
 - [2.8] Test @Transactional and @Modifying Annotation
+
+### 3: [JPA RELATIONSHIPS]
+- [3.1] Create and Map Course and CourseMaterial Entities 
