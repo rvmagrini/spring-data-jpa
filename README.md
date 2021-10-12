@@ -1,6 +1,7 @@
-# Spring Boot Application using Spring Data JPA to Create Scalable Back-End
+# Spring Boot Application using Spring Data JPA 
+## Learning Spring DATA JPA to Create Scalable Back-End
 
-## Development Process:
+## Process:
 
 ### 1: [INITIALIZING]
 TASKS:
@@ -14,4 +15,5 @@ TASKS:
 - [2.4] Test JPA Repository & its Query Methods
 - [2.5] Test JPA Query Annotations
 - [2.6] Test Native Query
+- [2.7] Test Native Query Named Param
 

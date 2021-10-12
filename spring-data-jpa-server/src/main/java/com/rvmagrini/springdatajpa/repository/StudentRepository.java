@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.rvmagrini.springdatajpa.student.Student;
@@ -37,6 +38,13 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 			nativeQuery = true
 			)
 	String getStudentByEmailAddressNative(String emailId);
+	
+	// Native Query using Named Param: best practice when we have to pass multiple parameters
+	@Query(
+			value = "SELECT * FROM students s WHERE s.email = :emailId",
+			nativeQuery = true
+			)
+	String getStudentByEmailAddressNativeNamedParam(@Param("emailId") String emailId);
 	
 
 }

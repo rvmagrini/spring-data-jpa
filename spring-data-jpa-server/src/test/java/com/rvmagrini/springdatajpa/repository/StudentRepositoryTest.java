@@ -109,20 +109,29 @@ class StudentRepositoryTest {
 		System.out.println("===== Get student by email address rob@gmail.com: " + student);
 	}
 	
+	// Passing Query (JPQL)
 	@Test
 	public void printFirstNameByEmailAddress() {
 		String studentFirstNameByEmailAddress = studentRepository.getStudentFirstNameByEmailAddress("steve@gmail.com");
 		
-		System.out.println("===== Print first name by email address steve@gmail.com: " + studentFirstNameByEmailAddress);
+		System.out.println("===== First name by email address steve@gmail.com: " + studentFirstNameByEmailAddress);
 	}
 	
 	
-	// Native Queries
+	// Native Query
 	@Test
 	public void printFirstNameByEmailAddressNative() {
 		String studentFirstNameByEmailAddressNative = studentRepository.getStudentByEmailAddressNative("rob@gmail.com");
 		
-		System.out.println("===== Native print first name by email address rob@gmail.com: " + studentFirstNameByEmailAddressNative);
+		System.out.println("===== Native first name by email address rob@gmail.com: " + studentFirstNameByEmailAddressNative);
+	}
+	
+	// Native Query using Named Param
+	@Test
+	public void printFirstNameByEmailAddressNativeNamedParam() {
+		String studentFirstNameByEmailAddressNativeNamedParam = studentRepository.getStudentByEmailAddressNativeNamedParam("rob@gmail.com");
+		
+		System.out.println("===== Native Named Param first name by email address rob: " + studentFirstNameByEmailAddressNativeNamedParam);
 	}
 
 
