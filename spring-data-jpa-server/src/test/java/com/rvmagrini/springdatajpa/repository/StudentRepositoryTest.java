@@ -133,6 +133,13 @@ class StudentRepositoryTest {
 		
 		System.out.println("===== Native Named Param first name by email address rob: " + studentFirstNameByEmailAddressNativeNamedParam);
 	}
+	
+	
+	// Modifying & Transaction
+	@Test
+	public void updateStudentNameByEmailIdTest() {
+		studentRepository.updateStudentNameByEmailId("Robert", "rob@gmail.com");
+	}
 
 
 }
