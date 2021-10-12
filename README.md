@@ -11,3 +11,5 @@ TASKS:
 - [2.1] Mapping Student Entity
 - [2.2] Create Student Repository and test its methods
 - [2.3] Create embeddable Guardian Class
+- [2.4] Test JPA Repository & its Query Methods
+
