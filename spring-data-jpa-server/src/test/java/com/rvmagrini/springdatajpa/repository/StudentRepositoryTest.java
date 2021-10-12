@@ -115,6 +115,15 @@ class StudentRepositoryTest {
 		
 		System.out.println("===== Print first name by email address steve@gmail.com: " + studentFirstNameByEmailAddress);
 	}
+	
+	
+	// Native Queries
+	@Test
+	public void printFirstNameByEmailAddressNative() {
+		String studentFirstNameByEmailAddressNative = studentRepository.getStudentByEmailAddressNative("rob@gmail.com");
+		
+		System.out.println("===== Native print first name by email address rob@gmail.com: " + studentFirstNameByEmailAddressNative);
+	}
 
 
 }
