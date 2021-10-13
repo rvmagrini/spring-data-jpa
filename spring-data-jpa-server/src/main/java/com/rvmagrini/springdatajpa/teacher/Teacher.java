@@ -41,14 +41,10 @@ public class Teacher {
 	
 	// Defining OneToMany relationship between Teacher and Course:
 	// A teacher can lecture many courses
-	@OneToMany(
-			cascade = CascadeType.ALL
-			)
+	@OneToMany(cascade = CascadeType.ALL)
 	// Create an extra column in Course Table indicating the Teacher who is lecturing it
-	@JoinColumn(
-			name = "teacher_id",
-			referencedColumnName = "teacherId"
-			)
+	@JoinColumn(name = "teacher_id",
+			referencedColumnName = "teacherId")
 	private List<Course> courses;
 
 }
