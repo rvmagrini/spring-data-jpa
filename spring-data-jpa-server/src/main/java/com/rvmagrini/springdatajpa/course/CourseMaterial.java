@@ -48,9 +48,11 @@ public class CourseMaterial {
 	// Fetch Type: defines if it should also retrieve data from the table related (Course) 
 	// when the CourseMaterial is fetched. EAGER will always retrieve both; LAZY will retrieve Course 
 	// only if you specify.
+	// Optional as false: set Course as a mandatory data, it has to be provided when a Material is created
 	@OneToOne(
 			cascade = CascadeType.ALL,
-			fetch = FetchType.LAZY
+			fetch = FetchType.LAZY,
+			optional = false
 			)
 	private Course course;
 

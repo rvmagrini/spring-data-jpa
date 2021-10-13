@@ -17,6 +17,7 @@ class CourseMaterialRepositoryTest {
 	
 	
 	// Testing Cascade
+	// Optionally Course x Material
 	@Test
 	public void saveCourseMaterial() {
 		
@@ -28,7 +29,7 @@ class CourseMaterialRepositoryTest {
 		
 		CourseMaterial courseMaterial = 
 				CourseMaterial.builder()
-				.url("www.javacourse.com")
+				.url("www.java.com")
 				.course(course)
 				.build();
 		
