@@ -21,5 +21,9 @@ TASKS:
 ### 3: [JPA RELATIONSHIPS]
 - [3.1] Create and Map Course and CourseMaterial Entities 
 - [3.2] Save a course using CourseMaterialRepository with Cascading
-- [3.3] Test Fetch Types LAZY and EAGER in CourseMaterial
+- [3.3] Define Course field FetchType as LAZY in CourseMaterial
+- [3.4] Include Material when Course is retrieved using Bi-Directional relation 
+
+Retrieve CourseMaterial when Course is fetched
+
 

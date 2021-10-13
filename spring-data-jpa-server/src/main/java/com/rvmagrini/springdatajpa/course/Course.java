@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -31,5 +32,12 @@ public class Course {
 	private Long courseId;
 	private String title;
 	private Integer credit;
+	
+	// Bi-Directional: mapping the join column created in CourseMaterial
+	//'mapped by' tells that the OneToOne relationship is already defined in CourseMaterial Class.
+	@OneToOne(
+			mappedBy = "course"
+			)
+	private CourseMaterial courseMaterial;
 
 }

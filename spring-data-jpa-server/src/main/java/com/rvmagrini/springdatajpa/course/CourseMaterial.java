@@ -21,7 +21,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-// If using FetchType LAZY, add: @ToString(exclude = "course")
+// If using FetchType LAZY, add: 
+@ToString(exclude = "course")
 public class CourseMaterial {
 	
 	@Id
@@ -49,7 +50,7 @@ public class CourseMaterial {
 	// only if you specify.
 	@OneToOne(
 			cascade = CascadeType.ALL,
-			fetch = FetchType.EAGER
+			fetch = FetchType.LAZY
 			)
 	private Course course;
 
