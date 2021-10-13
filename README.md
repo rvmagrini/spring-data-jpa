@@ -7,7 +7,7 @@
 TASKS:
 - [1.1] Create Spring Boot Project, Database Schema and application properties
 
-### 2: [JPA MAP AND QUERY]
+### 2: [JPA MAP AND QUERIES]
 TASKS:
 - [2.1] Create and Map Student Entity
 - [2.2] Create Student Repository and test save/list Methods
@@ -16,14 +16,15 @@ TASKS:
 - [2.5] Test JPA Query Annotations
 - [2.6] Test Native Query
 - [2.7] Test Native Query Named Param
-- [2.8] Test @Transactional and @Modifying Annotation
+- [2.8] Test Transactional and Modifying Annotation
 
-### 3: [JPA RELATIONSHIPS]
+### 3: [JPA ONE-TO-ONE BI-DIRECTIONAL RELATIONSHIP]
+TASKS:
 - [3.1] Create and Map Course and CourseMaterial Entities 
-- [3.2] Save a course using CourseMaterialRepository with Cascading
+- [3.2] Save a Course using CourseMaterialRepository with Cascading
 - [3.3] Define Course field FetchType as LAZY in CourseMaterial
-- [3.4] Include Material when Course is retrieved using Bi-Directional relation 
+- [3.4] Include Material when Course is fetched using Bi-Directional relation 
 
-Retrieve CourseMaterial when Course is fetched
-
-
+### 4: [JPA ONE-TO-MANY AND MANY-TO-ONE RELATIONSHIP]
+TASKS:
+- [4.1] Create and Map Teacher Entity
