@@ -2,6 +2,7 @@ package com.rvmagrini.springdatajpa.course;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,12 +14,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+// If using FetchType LAZY, add: @ToString(exclude = "course")
 public class CourseMaterial {
 	
 	@Id
@@ -34,14 +37,19 @@ public class CourseMaterial {
 	private Long courseMaterialId;
 	private String url;
 	
-	// Adding one extra column to CourseMaterial table that refers to the course to which the
-	// material belongs: adding the primary key from Course as a foreign key in CourseMaterial
+	// JoinColumn: Adding one extra column to CourseMaterial table that refers to the course to which the
+	// material belongs: adding the Primary Key of Course as a Foreign Key in CourseMaterial
 	@JoinColumn(
 			name = "course_id",
 			referencedColumnName = "courseId"
 			)
-	@OneToOne (
-			cascade = CascadeType.ALL
+	// Cascade: allows CourseMaterialRepository to directly save a Course.
+	// Fetch Type: defines if it should also retrieve data from the table related (Course) 
+	// when the CourseMaterial is fetched. EAGER retrieve both; LAZY retrieve will retrieve Course 
+	// only if you specify.
+	@OneToOne(
+			cascade = CascadeType.ALL,
+			fetch = FetchType.EAGER
 			)
 	private Course course;
 
