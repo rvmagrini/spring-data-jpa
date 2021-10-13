@@ -46,7 +46,7 @@ public class CourseMaterial {
 			)
 	// Cascade: allows CourseMaterialRepository to directly save a Course.
 	// Fetch Type: defines if it should also retrieve data from the table related (Course) 
-	// when the CourseMaterial is fetched. EAGER retrieve both; LAZY retrieve will retrieve Course 
+	// when the CourseMaterial is fetched. EAGER will always retrieve both; LAZY will retrieve Course 
 	// only if you specify.
 	@OneToOne(
 			cascade = CascadeType.ALL,

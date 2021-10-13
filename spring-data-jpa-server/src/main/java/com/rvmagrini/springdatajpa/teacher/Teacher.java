@@ -1,10 +1,17 @@
 package com.rvmagrini.springdatajpa.teacher;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
+import com.rvmagrini.springdatajpa.course.Course;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,5 +38,17 @@ public class Teacher {
 	private Long teacherId;
 	private String firstName;
 	private String lastName;
+	
+	// Defining OneToMany relationship between Teacher and Course:
+	// A teacher can lecture many courses
+	@OneToMany(
+			cascade = CascadeType.ALL
+			)
+	// Create an extra column in Course Table indicating the Teacher who is lecturing it
+	@JoinColumn(
+			name = "teacher_id",
+			referencedColumnName = "teacherId"
+			)
+	private List<Course> courses;
 
 }
