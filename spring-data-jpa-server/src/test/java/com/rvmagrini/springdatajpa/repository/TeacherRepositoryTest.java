@@ -37,7 +37,8 @@ class TeacherRepositoryTest {
 				Teacher.builder()
 				.firstName("Jonas")
 				.lastName("Schmedtmann")
-				.courses(List.of(javaScriptCourse, cssCourse))
+				// Many to one implemented
+				// .courses(List.of(javaScriptCourse, cssCourse))
 				.build();
 		
 		teacherRepository.save(jonas);
@@ -61,7 +62,8 @@ class TeacherRepositoryTest {
 				Teacher.builder()
 				.firstName("Max")
 				.lastName("Schwarzmüller")
-				.courses(List.of(reactCourse, nodejsCourse))
+				// Many to one implemented
+				// .courses(List.of(reactCourse, nodejsCourse))
 				.build();
 		
 		teacherRepository.save(max);

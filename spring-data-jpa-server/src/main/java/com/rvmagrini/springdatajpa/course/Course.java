@@ -1,11 +1,16 @@
 package com.rvmagrini.springdatajpa.course;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+
+import com.rvmagrini.springdatajpa.teacher.Teacher;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,10 +39,20 @@ public class Course {
 	private Integer credit;
 	
 	// Bi-Directional: mapping the join column created in CourseMaterial
-	//'mapped by' tells that the OneToOne relationship is already defined in CourseMaterial Class.
+	//'mapped by' tells that the OmysqneToOne relationship is already defined in CourseMaterial Class.
 	@OneToOne(
 			mappedBy = "course"
 			)
 	private CourseMaterial courseMaterial;
+	
+	// Many courses available that could be set to any one of the teachers
+	@ManyToOne(
+			cascade = CascadeType.ALL
+			)
+	@JoinColumn(
+			name = "teacher_id",
+			referencedColumnName = "teacherId"
+			)
+	private Teacher teacher;
 
 }

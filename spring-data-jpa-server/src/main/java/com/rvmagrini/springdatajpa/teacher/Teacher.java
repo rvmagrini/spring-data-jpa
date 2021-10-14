@@ -39,12 +39,21 @@ public class Teacher {
 	private String firstName;
 	private String lastName;
 	
+	
+	
+	// JPA Specification Guidance: go for MANY TO ONE if possible
+	// Rather than defining that one teacher could lecture a list of courses, we should go for setting
+	// many courses available that could be set to any one of the teachers: 
+	// We should implement the reverse (MANY TO ONE) inside Course Class.
+	/* 
 	// Defining OneToMany relationship between Teacher and Course:
 	// A teacher can lecture many courses
 	@OneToMany(cascade = CascadeType.ALL)
 	// Create an extra column in Course Table indicating the Teacher who is lecturing it
-	@JoinColumn(name = "teacher_id",
+	@JoinColumn(
+			name = "teacher_id",
 			referencedColumnName = "teacherId")
 	private List<Course> courses;
+	*/
 
 }
