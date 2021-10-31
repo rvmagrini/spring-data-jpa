@@ -1,5 +1,5 @@
 # Spring Data JPA Tutorial 
-## Learning to Create Scalable Back-End using Spring Data
+## Creating Scalable Back-End using Spring Data
 
 ## Process:
 
@@ -41,6 +41,6 @@ TASKS:
 
 ### 6: [MANY-TO-MANY RELATIONSHIP]
 TASKS:
-- [6.1] 
+- [6.1] Implement ManyToMany relationship between Student and Course
 
 

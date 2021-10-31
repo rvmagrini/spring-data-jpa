@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import com.rvmagrini.springdatajpa.course.Course;
+import com.rvmagrini.springdatajpa.student.Student;
 import com.rvmagrini.springdatajpa.teacher.Teacher;
 
 @SpringBootTest
@@ -163,6 +164,26 @@ class CourseRepositoryTest {
 				courseRepository.findByTitleContaining("t", firstPageTenRecords).getContent();
 		
 		System.out.println("===== printPageFindByTitleContaining: " + courses);
+	}
+	
+	
+	// Many to Many: student x course
+	@Test
+	public void saveCourseWithStudentAndTeacher() {
+		Course react = Course.builder()
+				.title("React")
+				.credit(5)
+				.teacher(max)
+				.build();
+		
+		Student bob = Student.builder()
+				.firstName("Bob")
+				.lastName("Brown")
+				.emailId("brown@gmail.com")
+				.build();
+		
+		react.addStudent(bob);
+		courseRepository.save(react);
 	}
 
 }
