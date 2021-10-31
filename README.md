@@ -34,3 +34,13 @@ TASKS:
 - [4.5] Define mandatory relationship between Course and Material
 - [4.6] Define ManyToOne relationship between Course and Teacher
 
+
+### 5: [PAGING AND SORTING]
+TASKS:
+- [5.1] Test Paging and Sorting DB Records
+
+### 6: [MANY-TO-MANY RELATIONSHIP]
+TASKS:
+- [6.1] 
+
+

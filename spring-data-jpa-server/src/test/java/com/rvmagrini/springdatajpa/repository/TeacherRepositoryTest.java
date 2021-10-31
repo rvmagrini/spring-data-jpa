@@ -1,14 +1,9 @@
 package com.rvmagrini.springdatajpa.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.List;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.rvmagrini.springdatajpa.course.Course;
 import com.rvmagrini.springdatajpa.teacher.Teacher;
 
 @SpringBootTest
@@ -21,7 +16,7 @@ class TeacherRepositoryTest {
 	public void saveTeacher() {
 		
 		// Jonas
-		Course javaScriptCourse = 
+		/* Course javaScriptCourse = 
 				Course.builder()
 				.title("JavaScript")
 				.credit(5)
@@ -31,7 +26,7 @@ class TeacherRepositoryTest {
 				Course.builder()
 				.title("CSS")
 				.credit(4)
-				.build(); 
+				.build(); */
 		
 		Teacher jonas = 
 				Teacher.builder()
@@ -46,7 +41,7 @@ class TeacherRepositoryTest {
 		
 		
 		// Max
-		Course reactCourse = 
+		/* Course reactCourse = 
 				Course.builder()
 				.title("React")
 				.credit(6)
@@ -56,7 +51,7 @@ class TeacherRepositoryTest {
 				Course.builder()
 				.title("NodeJS")
 				.credit(4)
-				.build(); 
+				.build(); */
 		
 		Teacher max = 
 				Teacher.builder()
